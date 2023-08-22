@@ -15,4 +15,4 @@ def to_kv(k: str, v: typing.Union[int, float]) -> tup:
     a func that takes in `str: k` and `int | float: v` to return
     A tuple (k, v)
     """
-    return (k, v)
+    return (k, v**2)
