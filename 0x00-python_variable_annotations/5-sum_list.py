@@ -6,7 +6,7 @@ that takes in list of float an return their sum
 import typing
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: typing.List[float]) -> float:
     """A func that takes in list of float as param and return
     float"""
     sum: float = 0.0
