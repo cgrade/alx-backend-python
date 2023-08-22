@@ -7,7 +7,7 @@ which takes  param and return a tuple
 import typing
 
 
-tup = typing.Tuple[str, int | float]
+tup = typing.Tuple[str, float]
 
 
 def to_kv(k: str, v: typing.Union[int, float]) -> tup:
