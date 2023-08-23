@@ -7,7 +7,7 @@ func that takes in float param and returns a func.
 import typing
 
 
-Cal = typing.Callable[float, float]
+Cal = typing.Callable[[float], float]
 
 
 def make_multiplier(multiplier: float) -> Cal:
