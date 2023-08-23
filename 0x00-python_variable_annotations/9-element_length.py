@@ -7,7 +7,7 @@ annotated
 import typing
 
 
-re = typing.List[typing.Tuple[str, int]]
+re = typing.List[typing.Tuple[typing.Sequence, int]]
 
 
 def element_length(lst: typing.Iterable[typing.Sequence]) -> re:
