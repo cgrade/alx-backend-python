@@ -7,10 +7,10 @@ func that takes in float param and returns a func.
 import typing
 
 
-cal = typing.Callable[float, float]
+Cal = typing.Callable[float, float]
 
 
-def make_multiplier(multiplier: float) -> cal:
+def make_multiplier(multiplier: float) -> Cal:
     """
     a func that takes in a float `param` and returns
     a callable that multiply a float by `param`
