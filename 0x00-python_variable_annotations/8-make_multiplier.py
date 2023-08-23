@@ -21,4 +21,4 @@ def make_multiplier(multiplier: float) -> cal:
         by `multiplier: float` and returns it.
         """
         return x * multiplier
-    return mul 
+    return mul
