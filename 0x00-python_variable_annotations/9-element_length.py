@@ -10,7 +10,7 @@ import typing
 re = typing.List[typing.Tuple[str, int]]
 
 
-def element_length(lst: typing.List[typing.Union[str, int]]) -> re:
+def element_length(lst: typing.List[str]) -> re:
     """
     a func that take `lst: list` as param and returns each element of
     the list and it's length
