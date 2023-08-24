@@ -24,4 +24,12 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
         worker = asyncio.create_task(wait_random(max_delay))
         rs = await worker
         list_of_delays.append(rs)
-    return list_of_delays
+
+    sorts: typing.List[float] = []
+
+    # loop tru the list_of_delays
+    while list_of_delays:
+        smallestNum = min(list_of_delays)
+        sorts.append(smallestNum)
+        list_of_delays.remove(smallestNum)
+    return sorts
