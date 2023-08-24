@@ -11,7 +11,7 @@ import random as r
 import typing
 
 
-async def wait_random(max_delay: int = 10) -> typing.Union[int, float]:
+async def wait_random(max_delay: int = 10) -> float:
     """
     an Async function that takes in an integer "max_delay" and wait
     between 0 and max_delay then returns the param "max_delay"
