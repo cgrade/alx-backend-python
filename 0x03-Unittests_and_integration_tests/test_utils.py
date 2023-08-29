@@ -23,13 +23,12 @@ class TestAccessNestedMap(unittest.TestCase):
         super().__init__(methodName)
 
     @parameterized.expand([
-            ({"a": 1}, ["a"], 1),
-            ({"a": {"b": 2}}, ["a"], {'b': 2}),
-            ({"a": {"b": 2}}, ["a", "b"], 2),
+            ({}, ["a"], 'KeyError: a'),
+            ({"a": 1}, ["a", "b"], 'KeyError: b'),
     ])
     def test_access_nested_map(self, nested_map: Mapping,
                                path: Sequence, expected_result: Any):
         """ A test method that test for correcteness
         """
-        result = access_nested_map(nested_map, path)
-        self.assertEqual(result, expected_result)
+        with self.assertRaises(KeyError, msg=expected_result):
+            result = access_nested_map(nested_map, path)
