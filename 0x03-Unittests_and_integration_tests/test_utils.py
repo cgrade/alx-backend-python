@@ -3,7 +3,7 @@
     `utils.access_nested_map` method.
 """
 
-from utils import access_nested_map, get_json
+from utils import access_nested_map, get_json, memoize
 import unittest
 from unittest.mock import patch, Mock
 from unittest.mock import patch
@@ -49,18 +49,19 @@ class TestAccessNestedMap(unittest.TestCase):
         with self.assertRaises(KeyError, msg=expected_result):
             result = access_nested_map(nested_map, path)
 
+
 class TestGetJson(unittest.TestCase):
     """ A class that inherit from `TestCase`
-        to test `get_json()` method of 
+        to test `get_json()` method of
         `utils.py`
         in utils.py
     """
 
     def __init__(self, methodName: str = "runTest") -> None:
         super().__init__(methodName)
-    
+
     def test_get_json(self, url: str):
-        """ A test method that tests for correctness of the 
+        """ A test method that tests for correctness of the
             `get_json()` method of utils.py
         """
     @parameterized.expand(
